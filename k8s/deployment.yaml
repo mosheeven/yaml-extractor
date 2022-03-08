@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: web-api
+  name: web-api
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: web-api
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: web-api
+    spec:
+      containers:
+      - image: web-api:0.1.0
+        imagePullPolicy: IfNotPresent
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 5000
+        name: web-api
+        ports:
+        - containerPort: 5000
+        resources: {}

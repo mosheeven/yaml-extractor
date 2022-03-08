@@ -1,0 +1,26 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: web-api-ingress
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: yaml-extract.test.localdev.me
+    http:
+      paths:
+      - backend:
+          service:
+            name: web-api
+            port:
+              number: 5000
+        path: /        
+        pathType: Exact
+      - backend:
+          service:
+            name: web-api
+            port:
+              number: 5000
+        path: /api/yaml_extract
+        pathType: Exact
+status:
+  loadBalancer: {}
