@@ -6,14 +6,13 @@
 - Install [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
 - Install [helm](https://www.consul.io/docs/k8s/helm)
 
-## Run tool as cli
+## Run tool as CLI
 Add /cli/cli.py to you $PATH
 ```bash
 echo $PATH
 mv ./cli/cli.py <Folder on you $PATH>
 ```
 ## Build image
-1. 
 ```docker build -t web-api:0.1.0 . ```
 
 ## Run app with docker-compose
@@ -36,7 +35,7 @@ kubectl port-forward --namespace=ingress-nginx service/ingress-nginx-controller 
     - Go over jenkinsFiles/manual_steps.md
 
 ## Test web-api
-I will use postman for api request.
+Using Postman for api request.
 1. Make POST request to "http://yaml-extract.test.localdev.me:8080//api/yaml_extract"
 2. In the body of the request pass:
 ```bash
