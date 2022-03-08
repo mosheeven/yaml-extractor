@@ -13,10 +13,11 @@ echo $PATH
 mv ./cli/cli.py <Folder on you $PATH>
 ```
 ## Build image
-1. docker build -t web-api:0.1.0 . 
+1. 
+```docker build -t web-api:0.1.0 . ```
 
 ## Run app with docker-compose
-docker-compose up -d
+``` docker-compose up -d ```
 
 ## Kubernetes (Run local machine)
 1. Make sure you have local k8s cluster running with ingress controller [install-ingress](https://kubernetes.github.io/ingress-nginx/deploy/#quick-start).
