@@ -4,7 +4,7 @@
 - Docker for desktop [docker](https://docs.docker.com/desktop/mac/install/)
 - Docker compose [docker-compose](https://docs.docker.com/compose/install/)
 - Install [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
-- Install [helm](https://www.consul.io/docs/k8s/helm)
+- Install [helm](https://helm.sh/docs/intro/install/)
 
 ## Run tool as CLI
 Add /cli/cli.py to you $PATH
@@ -29,11 +29,6 @@ kubectl apply -f ./k8s/ingress.yaml
 
 kubectl port-forward --namespace=ingress-nginx service/ingress-nginx-controller 8080:80
 ```
-2. To connect k8s to consul and install node-exporter and filebeat. run jeknins job. 
-    - jenkinsFiles/install_consul_k8s.groovy
-    - jenkinsFiles/install_k8s_services.groovy
-    - Go over jenkinsFiles/manual_steps.md
-
 ## Test web-api
 Using Postman for api request.
 1. Make POST request to "http://yaml-extract.test.localdev.me:8080//api/yaml_extract"
