@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - image: web-api:0.1.0
-        imagePullPolicy: IfNotPresent
+        imagePullPolicy: Never
         livenessProbe:
           httpGet:
             path: /health
