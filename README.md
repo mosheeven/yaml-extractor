@@ -11,6 +11,7 @@ Add /cli/cli.py to you $PATH
 ```bash
 echo $PATH
 mv ./cli/cli.py <Folder on you $PATH>
+chmod +x <Folder on you $PATH>/cli.py
 ```
 ## Build image
 ```docker build -t web-api:0.1.0 . ```
