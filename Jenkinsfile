@@ -6,10 +6,5 @@ pipeline{
                 echo 'hello'
             }
         }
-        stage('push'){
-            stpes{
-                ehco 'push'
-            }
-        }
     }
 }
