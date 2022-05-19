@@ -1,12 +1,13 @@
 pipline{
+    agent any
     stages{
         stage('build'){
-            step(){
+            steps{
                 echo 'hello'
             }
         }
         stage('push'){
-            stpe{
+            stpes{
                 ehco 'push'
             }
         }
