@@ -5,11 +5,9 @@ pipeline{
         // }
     stages{
         stage('build'){
-            parallel
             steps{
                 echo 'hello'
             }
-
         }
         stage('Test'){
             steps{
