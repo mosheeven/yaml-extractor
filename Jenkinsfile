@@ -5,13 +5,20 @@ pipeline{
         // }
     stages{
         stage('build'){
+            parallel
             steps{
                 echo 'hello'
             }
+
         }
         stage('Test'){
             steps{
                 echo 'test'
+            }
+        }
+        stage('clean'){
+            steps{
+                echo 'clean'
             }
         }
     }
